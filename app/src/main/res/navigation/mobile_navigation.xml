@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/memoryFragment">
+    <fragment
+        android:id="@+id/memoryFragment"
+        android:name="ua.androbene.a500_app.ui.memory.MemoryFragment"
+        android:label="memory_fragment"
+        tools:layout="@layout/memory_fragment" >
+        <action
+            android:id="@+id/action_memoryFragment_to_battFragment"
+            app:destination="@id/battFragment" />
+        <action
+            android:id="@+id/action_memoryFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/battFragment"
+        android:name="ua.androbene.a500_app.ui.battery.BatteryFragment"
+        android:label="batt_fragment"
+        tools:layout="@layout/batt_fragment" >
+        <action
+            android:id="@+id/action_battFragment_to_memoryFragment"
+            app:destination="@id/memoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="ua.androbene.a500_app.ResultFragment"
+        android:label="result_fragment"
+        tools:layout="@layout/result_fragment" />
+</navigation>
